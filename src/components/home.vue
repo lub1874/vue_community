@@ -1,5 +1,5 @@
 <template>
-  <div class="warpper">
+  <div class="wrapper">
     <isheader class="header"></isheader>
     <tabs class="tab"></tabs>
     <bottom-navigation></bottom-navigation>
@@ -15,7 +15,7 @@
 
   .tab {
     flex: 1;
-    margin: 9rem 0 5rem 0;
+    margin: 9rem 0 0 0;
   }
 
   .header {

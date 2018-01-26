@@ -9,7 +9,7 @@
       </mu-tabs>
       <!--未读消息列表-->
       <ul v-if="accesstoken" class="lists" v-show="activeTab === 'hasnot_read'">
-        <router-link :to="{path='/vuecommunitytest/content', query: {id: item.topic.id}}" tag="li" class="list"
+        <router-link :to="{path:'/vuecommunitytest/content',query:{id:item.topic.id}}" tag="li" class="list"
                      v-for="item in hasnot_read_messages" :key="item.id">
           <div class="user">
             <img :src="item.author.avatar_url" alt="user"/>
@@ -27,7 +27,7 @@
       </ul>
       <!--已读消息-->
       <ul v-if="accesstoken" class="lists" v-show="activeTab === 'has_read'">
-        <router-link :to="{path='/vuecommunitytest/content', query: {id: item.topic.id}}" tag="li" class="list"
+        <router-link :to="{path:'/vuecommunitytest/content',query:{id:item.topic.id}}" tag="li" class="list"
                      v-for="item in has_read_messages" :key="item.id">
           <div class="user">
             <img :src="item.author.avatar_url" alt="user"/>
@@ -63,7 +63,7 @@
   }
 
   main {
-    margin: 5rem 0;
+    /*margin: 5rem 0;*/
     flex: 1;
     display: flex;
     flex-direction: column;

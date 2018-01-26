@@ -38,7 +38,7 @@
       暂无话题
 
     </section>
-    <mu-infinite-scroll :scorller="scroller" :loading="loading" @load="loadMore"></mu-infinite-scroll>
+    <mu-infinite-scroll :scroller="scroller" :loading="loading" @load="loadMore"></mu-infinite-scroll>
   </div>
 </template>
 

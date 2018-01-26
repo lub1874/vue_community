@@ -19,8 +19,12 @@
     height: 5rem;
   }
 
-  mu-icon-button {
+  .mu-icon-button {
     padding: 0.4rem;
+  }
+
+  img.logo {
+    max-width: 100%;
   }
 </style>
 

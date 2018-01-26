@@ -1,10 +1,12 @@
 <template>
-  <div class="warper">
+  <div class="wrapper">
     <mu-appbar title="登录" class="title"></mu-appbar>
-    <mu-text-field v-model="val" label="Access Token" errorText="error" labelFloat></mu-text-field>
-    <mu-raised-button @click="login" label="登录" class="demo-raised-button" primary></mu-raised-button>
+    <main>
+      <mu-text-field v-model="val" label="Access Token" :errorText="error" labelFloat></mu-text-field>
+      <mu-raised-button @click="login" label="登录" class="demo-raised-button" primary></mu-raised-button>
+    </main>
+    <bottom-navigation></bottom-navigation>
   </div>
-  <bottom-navigation></bottom-navigation>
 </template>
 
 <style scoped>
@@ -56,14 +58,14 @@
           localStorage.setItem("accesstoken", that.val)
           localStorage.setItem("user_id", res.data.id)
           localStorage.setItem("login_name", res.data.loginname)
-          that.$route.push({
+          that.$router.push({
             path: '/vuecommunitytest/personal'
           })
         }).catch(function (error) {
           console.log(error)
           that.error = "输入错误，请重新输入"
-          console.log(that.$route.matched)
-          that.$route.matched[0].meta = {
+          console.log(that.$router.matched)
+          that.$router.matched[0].meta = {
             requiresAuth: true
           }
         })

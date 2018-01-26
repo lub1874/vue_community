@@ -1,12 +1,12 @@
 <template>
-  <mu-appbar class="bottom_bar">
+  <mu-paper class="bottom_nav">
     <mu-bottom-nav :value="bottomNav" @change="handleChange">
       <mu-bottom-nav-item to="/vuecommunitytest" value="首页" title="首页" icon="home"></mu-bottom-nav-item>
-      <mu-bottom-nav-item to="/vuecommunitytest/publish" value="发表" title="发表" icon="publish"></mu-bottom-nav-item>
+      <mu-bottom-nav-item to="/vuecommunitytest/publish" value="发表" title="发表" icon="subject"></mu-bottom-nav-item>
       <mu-bottom-nav-item to="/vuecommunitytest/message" value="消息" title="消息" icon="message"></mu-bottom-nav-item>
-      <mu-bottom-nav-item :to="personal_path" value="我的" title="我的" icon="personal"></mu-bottom-nav-item>
+      <mu-bottom-nav-item :to="person_path" value="我的" title="我的" icon="personal"></mu-bottom-nav-item>
     </mu-bottom-nav>
-  </mu-appbar>
+  </mu-paper>
 </template>
 
 <style scoped>
@@ -29,13 +29,13 @@
     data () {
       return {
         bottomNav: "首页",
-        personal_path: "/vuecommunitytest/login"
+        person_path: "/vuecommunitytest/login"
       }
     },
     created () {
       this.facthData()
     },
-    watch () {
+    watch: {
       '$route': 'facthData'
     },
     methods: {
